@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>RCycle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">delete-post</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/home']"  tab="home">
+      <ion-icon name="home"></ion-icon>
+      Feed
+    </ion-tab-button>
+    <ion-tab-button  [routerLink]="['/search']" tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/create-post']"  tab="Post">
+      <ion-icon name="add"></ion-icon>
+      Post
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/login']"  tab="profile">
+      <ion-icon name="person"></ion-icon>
+      Profile
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

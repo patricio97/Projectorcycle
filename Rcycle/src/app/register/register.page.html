@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create your Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" [routerLink]="['/home']">Create account</ion-button>
+
+  <div>
+    <ion-button expand="block" fill="outline" size="small" slot="start" [routerLink]="['/home']">
+      <ion-icon></ion-icon>
+      Log In with Google
+    </ion-button>
+  </div>
+
+  <div>
+    <ion-button expand="block" fill="outline" size="small" slot="start" [routerLink]="['/home']">
+      <ion-icon></ion-icon>
+      Log In with Facebook
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    You have account? <a [routerLink]="['/login']">Log in here!</a>
+  </div>
+</ion-content>

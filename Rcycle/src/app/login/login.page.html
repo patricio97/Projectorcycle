@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Log in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" [routerLink]="['/home']">Log in</ion-button>
+
+  <div>
+    <ion-button expand="block" fill="outline" size="small" slot="start" [routerLink]="['/home']">
+      <ion-icon></ion-icon>
+      Log In with Google
+    </ion-button>
+  </div>
+
+  <div>
+    <ion-button expand="block" fill="outline" size="small" slot="start" [routerLink]="['/home']">
+      <ion-icon></ion-icon>
+      Log In with Facebook
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    You don't have account? <a [routerLink]="['/register']">Sign up here!</a>
+  </div>
+</ion-content>
