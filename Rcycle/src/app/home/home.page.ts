@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  hoy = new Date();
   constructor() {}
 
+}
+interface ScrollBaseDetail {
+  isScrolling: boolean;
 }

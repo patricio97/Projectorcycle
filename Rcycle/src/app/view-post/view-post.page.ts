@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewPostPage implements OnInit {
 
+  hoy = new Date();
   constructor() { }
 
   ngOnInit() {

@@ -11,21 +11,21 @@
 
 <ion-content>
 
-  <ion-item>
+  <ion-item [routerLink]="['/home']">
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
     </ion-thumbnail>
     <ion-label> Puntos de Reciclaje </ion-label>
   </ion-item>
 
-  <ion-item>
+  <ion-item [routerLink]="['/home']">
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
     </ion-thumbnail>
     <ion-label> Ropa Segunda oportunidad</ion-label>
   </ion-item>
 
-  <ion-item>
+  <ion-item [routerLink]="['/home']">
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
     </ion-thumbnail>
@@ -34,23 +34,27 @@
 
 </ion-content>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button [routerLink]="['/home']"  tab="home">
-      <ion-icon name="home"></ion-icon>
-      Feed
-    </ion-tab-button>
-    <ion-tab-button  [routerLink]="['/search']" tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/create-post']"  tab="Post">
-      <ion-icon name="add"></ion-icon>
-      Post
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/login']"  tab="profile">
-      <ion-icon name="person"></ion-icon>
-      Profile
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/home']" tab="home">
+          <ion-icon name="home"></ion-icon>
+          Feed
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/search']" tab="search">
+          <ion-icon name="search"></ion-icon>
+          Search
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/create-post']" tab="Post">
+          <ion-icon name="add"></ion-icon>
+          Post
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/login']" tab="profile">
+          <ion-icon name="person"></ion-icon>
+          Profile
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

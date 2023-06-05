@@ -4,31 +4,57 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">view-post</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-card [routerLink]="['/view-post']">
+    <img alt="Silhouette of mountains" src="https://bloygo.yoigo.com/embed/4b6b586fe30f6d03e03f4a813f659080cd1550233516/ReciclarAparatos.jpg?imagick=1&size=1250" />
+    <ion-card-header>
+      <h1>Reciclaje de Chatarra Electrónica en Santiago</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Planeta Limpio ofrece el servicio de retiro de chatarra electrónica en Santiago. Cotiza nuestros servicios. Llama
+          al +56 9 8725 6922.
+      </p>
+      <p>
+        {{hoy | date:"medium"}}
+      </p>
+    </ion-card-content>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label> User 1 </ion-label>
+      <ion-input></ion-input>
+      <td>
+        {{hoy | date:"HH:mm"}}
+      </td>
+    </ion-item>
+  </ion-card>
+  
 </ion-content>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button [routerLink]="['/home']"  tab="home">
-      <ion-icon name="home"></ion-icon>
-      Feed
-    </ion-tab-button>
-    <ion-tab-button  [routerLink]="['/search']" tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/create-post']"  tab="Post">
-      <ion-icon name="add"></ion-icon>
-      Post
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/login']"  tab="profile">
-      <ion-icon name="person"></ion-icon>
-      Profile
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/home']" tab="home">
+          <ion-icon name="home"></ion-icon>
+          Feed
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/search']" tab="search">
+          <ion-icon name="search"></ion-icon>
+          Search
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/create-post']" tab="Post">
+          <ion-icon name="add"></ion-icon>
+          Post
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/login']" tab="profile">
+          <ion-icon name="person"></ion-icon>
+          Profile
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
