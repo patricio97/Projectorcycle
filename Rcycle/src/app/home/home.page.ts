@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../rcycle/api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+getdata:any[]=[];
+hoy = new Date();
+  constructor( public _services: ApiService ) {
 
-  hoy = new Date();
-  constructor() {}
+    this._services.getdata<any[]>("").subscribe(data => {
+      this.getdata = data
+      console.log(this.getdata);
+    }
+      
+      )
+  }
 
 }
 interface ScrollBaseDetail {
