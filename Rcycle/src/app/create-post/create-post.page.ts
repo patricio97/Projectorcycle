@@ -1,26 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { BdserviceService } from './../serviceBD/servicebasedatos.service';
 
 @Component({
-  selector: 'create-post',
+  selector: 'app-create-post',
   templateUrl: './create-post.page.html',
   styleUrls: ['./create-post.page.scss'],
 })
-export class AgregarPage implements OnInit {
-  tituloNoticia = "";
-  textoNoticia = "";
+export class CreatePostPage implements OnInit {
+  
+  customCounterFormatter(inputLength: number, maxLength: number) {
+    return `${maxLength - inputLength} characters remaining`;
+  }
 
-  constructor(public router:Router, private db: BdserviceService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  insertar(){
-    this.db.insertarNoticias(this.tituloNoticia,this.textoNoticia);
-    this.db.presentToast("Noticia Agregada");
-    this.router.navigate(['/listar']);
-  }
-
 }
-

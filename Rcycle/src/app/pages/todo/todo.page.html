@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Todo List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let todo of todos">
+      <ion-label>{{ todo.text }}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="updateTodo(todo.id, $event)"><ion-icon name="create"></ion-icon></ion-button>
+        <ion-button (click)="deleteTodo(todo.id)"><ion-icon name="trash"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input [(ngModel)]="newTodo" placeholder="New Todo"></ion-input>
+    <ion-button expand="full" (click)="addTodo()">Add Todo</ion-button>
+  </ion-item>
+</ion-content>
