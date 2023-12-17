@@ -6,21 +6,39 @@
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-label position="floating">Name</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">email</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-label position="floating">User</ion-label>
+    <ion-input [(ngModel)]="usuario"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input [(ngModel)]="clave"></ion-input>
   </ion-item>
 
-  <ion-button expand="block" [routerLink]="['/home']">Create account</ion-button>
+  <ion-item>
+    <ion-label position="floating">Repeat Password</ion-label>
+    <ion-input [(ngModel)]="clave2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="mail"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input [(ngModel)]="apellido"></ion-input>
+  </ion-item>
+
+  <div class="boton">
+    <ion-button expand="block" fill="outline" size="small" slot="start"(click)="insertar()">Create Account</ion-button>
+    <ion-button expand="block" fill="outline" size="small" slot="start">Exit</ion-button>
+  </div>
 
   <div>
     <ion-button expand="block" fill="outline" size="small" slot="start" [routerLink]="['/home']">

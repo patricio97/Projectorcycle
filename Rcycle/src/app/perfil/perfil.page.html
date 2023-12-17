@@ -1,27 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>RCycle</ion-title>
+    <ion-title>
+      RCycle
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
-      <ion-item>
-        <ion-input label="Add Title" labelPlacement="floating" placeholder="Enter text" [(ngModel)]="title"></ion-input>
-      </ion-item>
+      <ion-card-title class="ion-text-center subtitulo">Perfil</ion-card-title>
     </ion-card-header>
-  
     <ion-card-content>
-      <ion-item>
-        <ion-input type="text" [(ngModel)]="description" ></ion-input>
-      </ion-item>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label class="labels">Usuario: </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="labels">Contraseña: </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="labels">Nombre:</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="labels">Email: </ion-label>
+        </ion-item>
+      </ion-list>
+      <br>
+      <ion-button  expand="full" class="labels" color="dark">Modificar Perfil</ion-button>
+      <ion-button  expand="full" class="labels" color="dark"  (click)="inicio()">Inicio</ion-button>
     </ion-card-content>
-    <ion-button expand="block" (click)="insertar()" >Post</ion-button> 
   </ion-card>
-  
 </ion-content>
+
+  
+<ion-list>
+  
+</ion-list>
 
 <ion-footer>
   <ion-toolbar>
@@ -39,7 +54,7 @@
           <ion-icon name="add"></ion-icon>
           Post
         </ion-tab-button>
-        <ion-tab-button [routerLink]="['/login']" tab="profile">
+        <ion-tab-button [routerLink]="['/Perfil']" tab="profile">
           <ion-icon name="person"></ion-icon>
           Profile
         </ion-tab-button>

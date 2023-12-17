@@ -1,4 +1,7 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
+import { BdserviceService } from '../services/bdservice.service';
 
 @Component({
   selector: 'app-create-post',
@@ -6,14 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-post.page.scss'],
 })
 export class CreatePostPage implements OnInit {
+  title='';
+  description = '';
   
-  customCounterFormatter(inputLength: number, maxLength: number) {
-    return `${maxLength - inputLength} characters remaining`;
-  }
 
-  constructor() { }
+  constructor(public router:Router, private db: BdserviceService) { }
 
   ngOnInit() {
+  }
+
+  insertar(){
+    this.db.insertarPost(this.title, this.description);
+    this.db.presentToast("Post Agregado");
+    this.router.navigate(['/home']);
   }
 
 }
